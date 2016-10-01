@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Fusion Fun</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrapdark.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="left-block veil-container">
+      <canvas class="controller" width="160" height="160">
+
+      </canvas>
+      <div class="veil"></div>
+    </div>
+    <div class="main-container">
+      <div class="row">
+        <div class="column">
+          <table class="table text-center">
+            <tr>
+              <td><select id="selectPokemon" class="form-control"></select></td>
+              <td><button id="btnLoad" class="btn btn-primary">Load Pokemon</button></td>
+              <td><button id="btnNewPokemon" class="btn btn-success">New Pokemon</button></td>
+              <td><input type="text" id="txtPokemonID" class="form-control" /></td>
+              <td><input type="text" id="txtPokemonName" class="form-control" /></td>
+              <td>
+                <select id="selPokemonDirection" class="form-control">
+                  <option value="left">left</option>
+                  <option value="right">right</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Primary</td>
+              <td><input type="text" id="primary0" class="input-color form-control" /></td>
+              <td><input type="text" id="primary1" class="input-color form-control" /></td>
+              <td><input type="text" id="primary2" class="input-color form-control" /></td>
+              <td><input type="text" id="primary3" class="input-color form-control" /></td>
+              <td><input type="text" id="primary4" class="input-color form-control" /></td>
+            </tr>
+            <tr>
+              <td>Secondary</td>
+              <td><input type="text" id="secondary0" class="input-color form-control" /></td>
+              <td><input type="text" id="secondary1" class="input-color form-control" /></td>
+              <td><input type="text" id="secondary2" class="input-color form-control" /></td>
+              <td><input type="text" id="secondary3" class="input-color form-control" /></td>
+              <td><input type="text" id="secondary4" class="input-color form-control" /></td>
+            </tr>
+            <tr>
+              <td>Tertiary</td>
+              <td><input type="text" id="tertiary0" class="input-color form-control" /></td>
+              <td><input type="text" id="tertiary1" class="input-color form-control" /></td>
+              <td><input type="text" id="tertiary2" class="input-color form-control" /></td>
+              <td><input type="text" id="tertiary3" class="input-color form-control" /></td>
+              <td><input type="text" id="tertiary4" class="input-color form-control" /></td>
+            </tr>
+              <td>Quaternary</td>
+              <td><input type="text" id="quaternary0" class="input-color form-control" /></td>
+              <td><input type="text" id="quaternary1" class="input-color form-control" /></td>
+              <td><input type="text" id="quaternary2" class="input-color form-control" /></td>
+              <td><input type="text" id="quaternary3" class="input-color form-control" /></td>
+              <td><input type="text" id="quaternary4" class="input-color form-control" /></td>
+            </tr>
+            <tr>
+              <td>Face Size</td>
+              <td><input type="text" id="faceSizew" class="input-size form-control" /></td>
+              <td><input type="text" id="faceSizeh" class="input-size form-control" /></td>
+              <td>Head Size</td>
+              <td><input type="text" id="headSizew" class="input-size form-control" /></td>
+              <td><input type="text" id="headSizeh" class="input-size form-control" /></td>
+            </tr>
+            <tr>
+              <td>Face Origin</td>
+              <td><input type="text" id="faceOriginx" class="input-position form-control" /></td>
+              <td><input type="text" id="faceOriginy" class="input-position form-control" /></td>
+              <td>Head Origin</td>
+              <td><input type="text" id="headOriginx" class="input-position form-control" /></td>
+              <td><input type="text" id="headOriginy" class="input-position form-control" /></td>
+            </tr>
+            <tr>
+              <td><button id="btnLoadFuse" class="btn btn-warning">Check Sprites</button></td>
+              <td colspan="2"><button id="btnLoadFace" class="btn btn-info">Load Face</button></td>
+              <td><button id="btnLoadSprite" class="btn btn-info">Load Sprite</button></td>
+              <td colspan="2"><button id="btnLoadBody" class="btn btn-info">Load Body</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan="2"><button id="btnShowFaceOrigin" class="btn btn-primary">Show Face Origin</button></td>
+              <td><button id="btnShowData" class="btn btn-warning">Show Data</button></td>
+              <td colspan="2"><button id="btnShowHeadOrigin" class="btn btn-primary">Show Head Origin</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <textarea id="textareaJson" class="form-control" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="jsonBuilder.js" type="text/javascript"></script>
+  </body>
+</html>
