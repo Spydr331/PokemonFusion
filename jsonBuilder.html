@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Fusion Fun</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrapdark.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrapdark.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
     <div class="left-block veil-container">
@@ -16,7 +16,7 @@
     <div class="main-container">
       <div class="row">
         <div class="column">
-          <table class="table text-center">
+          <table class="table text-center table-data">
             <tr>
               <td><select id="selectPokemon" class="form-control"></select></td>
               <td><button id="btnLoad" class="btn btn-primary">Load Pokemon</button></td>
@@ -31,7 +31,7 @@
               </td>
             </tr>
             <tr>
-              <td>Primary</td>
+              <th>Primary <input type="checkbox" id="primaryCheck" class="input-check form-control" title="If this color is of something in the environment" /> </th>
               <td><input type="text" id="primary0" class="input-color form-control" /></td>
               <td><input type="text" id="primary1" class="input-color form-control" /></td>
               <td><input type="text" id="primary2" class="input-color form-control" /></td>
@@ -39,7 +39,7 @@
               <td><input type="text" id="primary4" class="input-color form-control" /></td>
             </tr>
             <tr>
-              <td>Secondary</td>
+              <th>Secondary <input type="checkbox" id="secondaryCheck" class="input-check form-control" title="If this color is of something in the environment" /></th>
               <td><input type="text" id="secondary0" class="input-color form-control" /></td>
               <td><input type="text" id="secondary1" class="input-color form-control" /></td>
               <td><input type="text" id="secondary2" class="input-color form-control" /></td>
@@ -47,14 +47,14 @@
               <td><input type="text" id="secondary4" class="input-color form-control" /></td>
             </tr>
             <tr>
-              <td>Tertiary</td>
+              <th>Tertiary <input type="checkbox" id="tertiaryCheck" class="input-check form-control" title="If this color is of something in the environment" /></th>
               <td><input type="text" id="tertiary0" class="input-color form-control" /></td>
               <td><input type="text" id="tertiary1" class="input-color form-control" /></td>
               <td><input type="text" id="tertiary2" class="input-color form-control" /></td>
               <td><input type="text" id="tertiary3" class="input-color form-control" /></td>
               <td><input type="text" id="tertiary4" class="input-color form-control" /></td>
             </tr>
-              <td>Quaternary</td>
+              <th>Quaternary <input type="checkbox" id="quarternaryCheck" class="input-check form-control" title="If this color is of something in the environment" /></th>
               <td><input type="text" id="quaternary0" class="input-color form-control" /></td>
               <td><input type="text" id="quaternary1" class="input-color form-control" /></td>
               <td><input type="text" id="quaternary2" class="input-color form-control" /></td>
@@ -101,6 +101,6 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="jsonBuilder.js" type="text/javascript"></script>
+    <script src="js/jsonBuilder.js" type="text/javascript"></script>
   </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "name": "baskstop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "reference": "./node_modules/.bin/backstop reference",
+    "test": "./node_modules/.bin/backstop test",
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backstopjs": "^2.0.4"
+  }
+}

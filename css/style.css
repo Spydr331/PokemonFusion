@@ -59,6 +59,23 @@ input.active {
   color: white;
 }
 
+input.input-check {
+  width: 20px;
+  display: inline-block;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+table.table-data>tbody>tr>th{
+  text-align: right;
+  vertical-align: middle;
+}
+
+table.table-data>tbody>tr>td{
+  vertical-align: middle;
+}
+
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }

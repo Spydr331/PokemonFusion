@@ -1,0 +1,34 @@
+{
+  "id": "prod_test",
+  "viewports": [
+    {
+      "name": "basic",
+      "width": 320,
+      "height": 480
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "BackstopJS Homepage",
+      "url": "https://garris.github.io/BackstopJS/",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        ".pokemonSection"
+      ],
+      "delay": 500,
+      "readyEvent": "backstop.ready"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "casper_scripts": "backstop_data/casper_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "casperFlags": [],
+  "engine": "phantomjs",
+  "report": ["browser"],
+  "debug": false
+}
