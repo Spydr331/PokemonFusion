@@ -1,3 +1,7 @@
+// URLs for testing
+// Reference: http://localhost/backstopReference.html
+// Testing: http://localhost/backstopTest.html
+
 var pokeObject = [];
 var $baseObject;
 var $containObject;
@@ -5,6 +9,9 @@ var $containObject;
 var imageWidth = 80;
 var imageHeight = 80;
 var visualScale = 4;
+
+var dataLength = null;
+var ranLength = 0;
 
 
 // Updating the pokemon Id with number of digits
@@ -34,6 +41,7 @@ function loadImage ($curElement, pokeId) {
     //draw background image
     context.imageSmoothingEnabled = false;
     context.drawImage(img1, 0, 0, img1.width*visualScale, img1.height*visualScale);
+    allLoaded();
   }
 }
 
@@ -55,14 +63,13 @@ function loadFusionImages ($curElement, poke) {
   var img1 = new Image();
   var img2 = new Image();
 
-  img1.src = "images/Body_" + padId(poke.id, 3) + ".png";
+  // $canvas.after(img1);
+  // $canvas.after(img2);
+
   img2.src = "images/Face_" + padId(poke.id, 3) + ".png";
-
-    $canvas.after(img1);
-      $canvas.after(img2);
-
-  img1.onload = function () {
-    img2.onload = function () {
+  img2.onload = function () {
+    img1.src = "images/Body_" + padId(poke.id, 3) + ".png";
+    img1.onload = function () {
       loadFusion (poke, img1, img2, context);
     }
   }
@@ -73,10 +80,21 @@ function loadFusion (poke, img1, img2, context) {
   context.imageSmoothingEnabled = false;
   context.drawImage(img1, 0, 0, img1.width*visualScale, img1.height*visualScale);
 
-  var positionX = poke.headOrigin.x*visualScale - poke.faceOrigin.x * imageWidth*visualScale;
-  var positionY = poke.headOrigin.y*visualScale - poke.faceOrigin.y * imageHeight*visualScale;
+  var positionX = poke.headOrigin.x*visualScale - poke.faceOrigin.x * visualScale;
+  var positionY = poke.headOrigin.y*visualScale - poke.faceOrigin.y * visualScale;
 
   context.drawImage(img2, positionX, positionY, img2.width*visualScale, img2.height*visualScale);
+  allLoaded();
+}
+
+function allLoaded() {
+  if(dataLength != null) {
+    if(ranLength < dataLength){
+      ranLength ++;
+    } else {
+      console.log('backstopjs_ready');
+    }
+  }
 }
 
 $(document).ready(function(){
@@ -86,16 +104,19 @@ $(document).ready(function(){
   // Load full pokemon object
   $.getJSON( "js/pokemon.json", function( data ) {
     $.each( data, function( key, val ) {
+      dataLength = data.length - 2;
       //pokeObject.push( val );
         if(val.id < 0)
           return;
 
         var $temp = $baseObject.clone();
 
-        if($containObject.hasClass("ReferenceSection"))
-          loadImage($temp, val.id);
-        else
-          loadFusionImages($temp, val);
+        // References
+        //loadImage($temp, val.id);
+        // Tests
+        loadFusionImages($temp, val);
+
+        $temp.addClass("pokemonID" + padId(val, 3));
 
         $containObject.append($temp);
     });

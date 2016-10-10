@@ -10,14 +10,14 @@
   "scenarios": [
     {
       "label": "BackstopJS Homepage",
-      "url": "https://garris.github.io/BackstopJS/",
+      "url": "http://localhost/backstopTest.html",
       "hideSelectors": [],
       "removeSelectors": [],
       "selectors": [
-        ".pokemonSection"
+        ".ReferenceTest"
       ],
-      "delay": 500,
-      "readyEvent": "backstop.ready"
+      "delay": 1500,
+      "readyEvent": "backstopjs_ready"
     }
   ],
   "paths": {

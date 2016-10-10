@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "reference": "./node_modules/.bin/backstop reference",
-    "test": "./node_modules/.bin/backstop test",
+    "backstoptest": "./node_modules/.bin/backstop test"
   },
   "keywords": [],
   "author": "",
