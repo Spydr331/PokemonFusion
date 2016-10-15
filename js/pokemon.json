@@ -2,6 +2,7 @@
   {
     "id": -1,
     "name": "",
+    "nameSegments": "",
     "direction": "left",
     "primary": [
       "",
@@ -55,6 +56,7 @@
   {
     "id": "1",
     "name": "Bulbasaur",
+    "nameSegments": ["Bulb", "asaur"],
     "direction": "left",
     "primary": [
       "#84efc6",
@@ -108,6 +110,7 @@
   {
     "id": "2",
     "name": "Ivysaur",
+    "nameSegments": ["Ivy", "saur"],
     "direction": "left",
     "primary": [
       "#8cd6f7",
@@ -161,6 +164,7 @@
   {
     "id": "3",
     "name": "Venusaur",
+    "nameSegments": ["Ven", "usaur"],
     "direction": "left",
     "primary": [
       "#84efde",
@@ -212,8 +216,294 @@
     }
   },
   {
+    "id": "4",
+    "name": "Charmander",
+    "nameSegments": [
+      "Char",
+      "mander"
+    ],
+    "direction": "left",
+    "primary": [
+      "#ffc663",
+      "#ff9442",
+      "#de5239",
+      "#8c2900",
+      "#101010"
+    ],
+    "secondary": [
+      "#ffd67b",
+      "#e7ad5a",
+      "#e7ad5a",
+      "#8c2900",
+      "#101010"
+    ],
+    "tertiary": [
+      "#ffd608",
+      "#ffd608",
+      "#f7a500",
+      "#e73900",
+      "#e73900"
+    ],
+    "quaternary": [
+      "#ffffff",
+      "#94cede",
+      "#42a57b",
+      "#184a31",
+      "#101010"
+    ],
+    "primaryCheck": false,
+    "secondaryCheck": false,
+    "tertiaryCheck": true,
+    "quaternaryCheck": false,
+    "faceSize": {
+      "w": 14,
+      "h": 10
+    },
+    "headSize": {
+      "w": 14,
+      "h": 10
+    },
+    "faceOrigin": {
+      "x": 4,
+      "y": 4
+    },
+    "headOrigin": {
+      "x": 24,
+      "y": 24
+    }
+  },
+  {
+    "id": "5",
+    "name": "Charmeleon",
+    "nameSegments": [
+      "Char",
+      "meleon"
+    ],
+    "direction": "left",
+    "primary": [
+      "#ff947b",
+      "#ff524a",
+      "#d62952",
+      "#942110",
+      "#101010"
+    ],
+    "secondary": [
+      "#ffd66b",
+      "#ffd66b",
+      "#e7ad5a",
+      "#942110",
+      "#101010"
+    ],
+    "tertiary": [
+      "#ffde29",
+      "#ffde29",
+      "#ffa500",
+      "#ff4200",
+      "#ff4200"
+    ],
+    "quaternary": [
+      "#ffffff",
+      "#b5b5b5",
+      "#6b6b6b",
+      "#6b6b6b",
+      "#101010"
+    ],
+    "primaryCheck": false,
+    "secondaryCheck": false,
+    "tertiaryCheck": false,
+    "quaternaryCheck": false,
+    "faceSize": {
+      "w": 15,
+      "h": 13
+    },
+    "headSize": {
+      "w": 15,
+      "h": 13
+    },
+    "faceOrigin": {
+      "x": 3,
+      "y": 3
+    },
+    "headOrigin": {
+      "x": 16,
+      "y": 24
+    }
+  },
+  {
+    "id": "6",
+    "name": "Charizard",
+    "nameSegments": [
+      "Char",
+      "izard"
+    ],
+    "direction": "left",
+    "primary": [
+      "#eeb45a",
+      "#ee8329",
+      "#cd5241",
+      "#833118",
+      "#000000"
+    ],
+    "secondary": [
+      "#eede7b",
+      "#eeb45a",
+      "#eeb45a",
+      "#833118",
+      "#000000"
+    ],
+    "tertiary": [
+      "#ffd510",
+      "#ffd510",
+      "#f6a410",
+      "#e64110",
+      "#e64110"
+    ],
+    "quaternary": [
+      "#207394",
+      "#207394",
+      "#084152",
+      "#084152",
+      "#000000"
+    ],
+    "primaryCheck": false,
+    "secondaryCheck": false,
+    "tertiaryCheck": true,
+    "quaternaryCheck": false,
+    "faceSize": {
+      "w": "9",
+      "h": "11"
+    },
+    "headSize": {
+      "w": "9",
+      "h": "11"
+    },
+    "faceOrigin": {
+      "x": "9",
+      "y": "2"
+    },
+    "headOrigin": {
+      "x": "27",
+      "y": "10"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Squirtle",
+    "nameSegments": [
+      "Squi",
+      "rtle"
+    ],
+    "direction": "left",
+    "primary": [
+      "#b5f7ef",
+      "#94d6ce",
+      "#5aad9c",
+      "#427363",
+      "#101010"
+    ],
+    "secondary": [
+      "#ffd66b",
+      "#e7ad5a",
+      "#ce7b29",
+      "#7b3108",
+      "#101010"
+    ],
+    "tertiary": [
+      "#d69452",
+      "#bd6b00",
+      "#7b3108",
+      "#632900",
+      "#101010"
+    ],
+    "quaternary": [
+      "#ffffff",
+      "#ffffff",
+      "#cec6c6",
+      "#cec6c6",
+      "#101010"
+    ],
+    "primaryCheck": false,
+    "secondaryCheck": false,
+    "tertiaryCheck": false,
+    "quaternaryCheck": false,
+    "faceSize": {
+      "w": "12",
+      "h": "13"
+    },
+    "headSize": {
+      "w": "12",
+      "h": "13"
+    },
+    "faceOrigin": {
+      "x": "6",
+      "y": "5"
+    },
+    "headOrigin": {
+      "x": "25",
+      "y": "26"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Wartortle",
+    "nameSegments": [
+      "War",
+      "tortle"
+    ],
+    "direction": "right",
+    "primary": [
+      "#c6bdff",
+      "#948cef",
+      "#636bc6",
+      "#42427b",
+      "#101010"
+    ],
+    "secondary": [
+      "#dec68c",
+      "#c69442",
+      "#8c5a21",
+      "#8c5a21",
+      "#101010"
+    ],
+    "tertiary": [
+      "#946363",
+      "#946363",
+      "#5a3908",
+      "#5a3908",
+      "#101010"
+    ],
+    "quaternary": [
+      "#ffffff",
+      "#dee7ef",
+      "#b5cede",
+      "#b5cede",
+      "#101010"
+    ],
+    "primaryCheck": false,
+    "secondaryCheck": false,
+    "tertiaryCheck": false,
+    "quaternaryCheck": false,
+    "faceSize": {
+      "w": 15,
+      "h": 8
+    },
+    "headSize": {
+      "w": 15,
+      "h": 8
+    },
+    "faceOrigin": {
+      "x": 7,
+      "y": 4
+    },
+    "headOrigin": {
+      "x": 40,
+      "y": 28
+    }
+  },
+  {
     "id": "35",
     "name": "Clefairy",
+    "nameSegments": ["Cle", "fairy"],
     "direction": "left",
     "primary": [
       "#ffc6a5",
@@ -267,6 +557,7 @@
   {
     "id": "36",
     "name": "Clefable",
+    "nameSegments": ["Cle", "fable"],
     "direction": "left",
     "primary": [
       "#ffc5b4",
@@ -320,6 +611,7 @@
   {
     "id": "37",
     "name": "Vulpix",
+    "nameSegments": ["Vul", "pix"],
     "direction": "left",
     "primary": [
       "#f7bd7b",
@@ -373,6 +665,7 @@
   {
     "id": "38",
     "name": "Ninetales",
+    "nameSegments": ["Nine", "tales"],
     "direction": "left",
     "primary": [
       "#f6e67b",
@@ -426,6 +719,7 @@
   {
     "id": "39",
     "name": "Jigglypuff",
+    "nameSegments": ["Jiggly", "puff"],
     "direction": "left",
     "primary": [
       "#ffada5",
@@ -479,6 +773,7 @@
   {
     "id": "40",
     "name": "Wigglytuff",
+    "nameSegments": ["Wiggly", "tuff"],
     "direction": "left",
     "primary": [
       "#ffdece",
@@ -532,6 +827,7 @@
   {
     "id": "41",
     "name": "Zubat",
+    "nameSegments": ["Zu", "bat"],
     "direction": "left",
     "primary": [
       "#bdceff",
@@ -585,6 +881,7 @@
   {
     "id": "42",
     "name": "Golbat",
+    "nameSegments": ["Gol", "bat"],
     "direction": "left",
     "primary": [
       "#accdff",
@@ -638,6 +935,10 @@
   {
     "id": "43",
     "name": "Oddish",
+    "nameSegments": [
+      "Od",
+      "dish"
+    ],
     "direction": "left",
     "primary": [
       "#7394a4",
@@ -650,47 +951,48 @@
       "#c5e67b",
       "#9cd54a",
       "#8bac31",
-      "#8bac31",
-      "#4a5a20"
+      "#4a5a20",
+      "#101010"
     ],
     "tertiary": [
+      "#ee3931",
+      "#ee3931",
+      "#b42931",
+      "#b42931",
+      "#101010"
+    ],
+    "quaternary": [
       "#7394a4",
       "#7394a4",
       "#5a6a83",
       "#29394a",
       "#101010"
     ],
-    "quaternary": [
-      "#ee3931",
-      "#ee3931",
-      "#b42931",
-      "#b42931",
-      "#b42931"
-    ],
     "primaryCheck": false,
     "secondaryCheck": false,
     "tertiaryCheck": false,
     "quaternaryCheck": false,
     "faceSize": {
-      "w": 8,
-      "h": 7
+      "w": "10",
+      "h": "7"
     },
     "headSize": {
-      "w": 8,
-      "h": 7
+      "w": "10",
+      "h": "7"
     },
     "faceOrigin": {
-      "x": 1,
-      "y": 1
+      "x": "0",
+      "y": "1"
     },
     "headOrigin": {
-      "x": 30,
-      "y": 40
+      "x": "29",
+      "y": "40"
     }
   },
   {
     "id": "44",
     "name": "Gloom",
+    "nameSegments": ["Glo", "om"],
     "direction": "left",
     "primary": [
       "#9ca4cd",
@@ -744,6 +1046,7 @@
   {
     "id": "45",
     "name": "Vileplume",
+    "nameSegments": ["Vile", "plume"],
     "direction": "left",
     "primary": [
       "#5a6283",
@@ -797,6 +1100,7 @@
   {
     "id": "46",
     "name": "Paras",
+    "nameSegments": ["Pa", "ras"],
     "direction": "left",
     "primary": [
       "#ffac62",
@@ -850,6 +1154,7 @@
   {
     "id": "47",
     "name": "Parasect",
+    "nameSegments": ["Para", "sect"],
     "direction": "left",
     "primary": [
       "#de6a31",
@@ -903,6 +1208,7 @@
   {
     "id": "48",
     "name": "Venonat",
+    "nameSegments": ["Veno", "nat"],
     "direction": "left",
     "primary": [
       "#8b6aa4",
@@ -956,6 +1262,7 @@
   {
     "id": "49",
     "name": "Venomoth",
+    "nameSegments": ["Veno", "moth"],
     "direction": "left",
     "primary": [
       "#eec5ff",
@@ -1008,7 +1315,8 @@
   },
   {
     "id": "50",
-    "name": "Diglet",
+    "name": "Diglett",
+    "nameSegments": ["Dig", "lett"],
     "direction": "left",
     "primary": [
       "#de9c5a",
@@ -1062,6 +1370,7 @@
   {
   "id": "51",
     "name": "Dugtrio",
+    "nameSegments": ["Dug", "trio"],
     "direction": "left",
     "primary": [
       "#de9c5a",
@@ -1115,6 +1424,7 @@
   {
     "id": "52",
     "name": "Meowth",
+    "nameSegments": ["Me", "owth"],
     "direction": "left",
     "primary": [
       "#ffe683",
@@ -1167,7 +1477,8 @@
   },
   {
     "id": "53",
-    "name": "Pursian",
+    "name": "Persian",
+    "nameSegments": ["Per", "sian"],
     "direction": "left",
     "primary": [
       "#ffffac",
@@ -1219,8 +1530,63 @@
     }
   },
   {
+    "id": "54",
+    "name": "Psyduck",
+    "nameSegments": ["Psy", "duck"],
+    "direction": "left",
+    "primary": [
+      "#ffe6a4",
+      "#ffd54a",
+      "#e6a452",
+      "#945a10",
+      "#101010"
+    ],
+    "secondary": [
+      "#ffeebd",
+      "#f6de8b",
+      "#deb452",
+      "#945a10",
+      "#101010"
+    ],
+    "tertiary": [
+      "#ffe6a4",
+      "#ffd54a",
+      "#e6a452",
+      "#945a10",
+      "#101010"
+    ],
+    "quaternary": [
+      "#ffeebd",
+      "#f6de8b",
+      "#deb452",
+      "#945a10",
+      "#101010"
+    ],
+    "primaryCheck": false,
+    "secondaryCheck": false,
+    "tertiaryCheck": false,
+    "quaternaryCheck": false,
+    "faceSize": {
+      "w": 20,
+      "h": 11
+    },
+    "headSize": {
+      "w": 20,
+      "h": 11
+    },
+    "faceOrigin": {
+      "x": 5,
+      "y": 3
+    },
+    "headOrigin": {
+      "x": 30,
+      "y": 26
+    }
+  },
+  {
     "id": "64",
     "name": "Kadabra",
+    "nameSegments": ["Kad", "abra"],
     "direction": "left",
     "primary": [
       "#ffffbd",
@@ -1274,6 +1640,7 @@
   {
     "id": "130",
     "name": "Gyarados",
+    "nameSegments": ["Gyar", "ados"],
     "direction": "left",
     "primary": [
       "#7bdeee",
@@ -1327,6 +1694,7 @@
   {
     "id": "131",
     "name": "Lapras",
+    "nameSegments": ["Lap", "ras"],
     "direction": "left",
     "primary": [
       "#73c5f6",
@@ -1380,6 +1748,7 @@
   {
     "id": "132",
     "name": "Ditto",
+    "nameSegments": ["Dit", "to"],
     "direction": "left",
     "primary": [
       "#e6a4f6",
@@ -1433,6 +1802,7 @@
   {
     "id": "133",
     "name": "Eevee",
+    "nameSegments": ["Ee", "vee"],
     "direction": "left",
     "primary": [
       "#e7c695",

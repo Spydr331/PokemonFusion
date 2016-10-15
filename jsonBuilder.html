@@ -23,12 +23,7 @@
               <td><button id="btnNewPokemon" class="btn btn-success">New Pokemon</button></td>
               <td><input type="text" id="txtPokemonID" class="form-control" /></td>
               <td><input type="text" id="txtPokemonName" class="form-control" /></td>
-              <td>
-                <select id="selPokemonDirection" class="form-control">
-                  <option value="left">left</option>
-                  <option value="right">right</option>
-                </select>
-              </td>
+              <td><input type="text" id="txtPokemonName2" class="form-control" /></td>
             </tr>
             <tr>
               <th>Primary <input type="checkbox" id="primaryCheck" class="input-check form-control" title="If this color is of something in the environment" /> </th>
@@ -86,16 +81,21 @@
             <tr>
               <td></td>
               <td colspan="2"><button id="btnShowFaceOrigin" class="btn btn-primary">Show Face Origin</button></td>
-              <td><button id="btnShowData" class="btn btn-warning">Show Data</button></td>
+              <td>
+                <select id="selPokemonDirection" class="form-control">
+                  <option value="left">left</option>
+                  <option value="right">right</option>
+                </select>
+              </td>
               <td colspan="2"><button id="btnShowHeadOrigin" class="btn btn-primary">Show Head Origin</button></td>
             </tr>
+            <tr>
+              <td><button id="btnShowData" class="btn btn-warning">Show Data</button></td>
+              <td colspan="5">
+                <textarea id="textareaJson" class="form-control" rows="3"></textarea>
+              </td>
+            </tr>
           </table>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column">
-          <textarea id="textareaJson" class="form-control" rows="3"></textarea>
         </div>
       </div>
     </div>

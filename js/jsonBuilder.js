@@ -11,6 +11,7 @@ var inputObjects = {
   'btnLoad': $("#btnLoad"),
   'txtPokemonID': $("#txtPokemonID"),
   'txtPokemonName': $("#txtPokemonName"),
+  'txtPokemonName2': $("#txtPokemonName2"),
   'selPokemonDirection': $("#selPokemonDirection"),
   'primary0': $("#primary0"),
   'primary1': $("#primary1"),
@@ -313,13 +314,19 @@ function loadObject(pokemon) {
   inputObjects.headOriginy.val(pokemon.headOrigin.y);
 
   inputObjects.txtPokemonID.val(pokemon.id);
-  inputObjects.txtPokemonName.val(pokemon.name);
+
+  if(pokemon.nameSegments.length > 1 && pokemon.nameSegments[1] != "") {
+    inputObjects.txtPokemonName.val(pokemon.nameSegments[0]);
+    inputObjects.txtPokemonName2.val(pokemon.nameSegments[1]);
+  } else {
+    inputObjects.txtPokemonName.val(pokemon.name);
+  }
   inputObjects.selPokemonDirection.val(pokemon.direction);
 
-  inputObjects.primaryCheck.checked = pokemon.primaryCheck;
-  inputObjects.secondaryCheck.checked = pokemon.secondaryCheck;
-  inputObjects.tertiaryCheck.checked = pokemon.tertiaryCheck;
-  inputObjects.quaternaryCheck.checked = pokemon.quaternaryCheck;
+  inputObjects.primaryCheck.prop( "checked", pokemon.primaryCheck );
+  inputObjects.secondaryCheck.prop( "checked", pokemon.secondaryCheck );
+  inputObjects.tertiaryCheck.prop( "checked", pokemon.tertiaryCheck );
+  inputObjects.quaternaryCheck.prop( "checked", pokemon.quaternaryCheck );
 }
 
 // Add color to textbox
@@ -330,7 +337,10 @@ function addColor (input, color) {
 // Place current Json object into textarea
 function showJson() {
   selPokemon.id = inputObjects.txtPokemonID.val();
-  selPokemon.name = inputObjects.txtPokemonName.val();
+  selPokemon.name = inputObjects.txtPokemonName.val() + inputObjects.txtPokemonName2.val();
+
+  selPokemon.nameSegments = [inputObjects.txtPokemonName.val(), inputObjects.txtPokemonName2.val()];
+
   selPokemon.direction = inputObjects.selPokemonDirection.val();
 
   var str = JSON.stringify(selPokemon, undefined, 2);
@@ -342,6 +352,7 @@ function showJson() {
 function clearFields () {
   inputObjects.selectPokemon.val();
   inputObjects.txtPokemonName.val("");
+  inputObjects.txtPokemonName2.val("");
   inputObjects.inputColor.val("");
   inputObjects.inputPositionAndSize.val("");
 }

@@ -24,9 +24,9 @@ var context = canvas.getContext("2d");
 var imageWidth = 80;
 var imageHeight = 80;
 var paletteCount = 5;
-var calcScale = 2;
-canvas.width = imageWidth*calcScale*2;
-canvas.height = imageHeight*calcScale*2;
+var calcScale = 4;
+canvas.width = imageWidth*calcScale*1.5;
+canvas.height = imageHeight*calcScale*1.5;
 
 var img1 = new Image();
 var img2 = new Image();
@@ -100,6 +100,9 @@ function loadFusion () {
 
   createCookie("Pokemon1",selPokemonId1,1);
   createCookie("Pokemon2",selPokemonId2,1);
+
+  //if(selPokemon1.direction != selPokemon2.direction)
+    // context.scale(-1, -1);
 
   context.drawImage(img2, positionX, positionY, img2.width*displayWidthRatio*calcScale, img2.height*displayHeightRatio*calcScale);
   inputObjects.veil.fadeOut();

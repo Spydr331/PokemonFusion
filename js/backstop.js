@@ -1,6 +1,4 @@
-// URLs for testing
-// Reference: http://localhost/backstopReference.html
-// Testing: http://localhost/backstopTest.html
+var isReference = false;
 
 var pokeObject = [];
 var $baseObject;
@@ -111,12 +109,15 @@ $(document).ready(function(){
 
         var $temp = $baseObject.clone();
 
-        // References
-        //loadImage($temp, val.id);
-        // Tests
-        loadFusionImages($temp, val);
+        if(isReference){
+          // References
+          loadImage($temp, val.id);
+        } else {
+          // Tests
+          loadFusionImages($temp, val);
+        }
 
-        $temp.addClass("pokemonID" + padId(val, 3));
+        $temp.addClass("pokemonID" + padId(val.id, 3));
 
         $containObject.append($temp);
     });
