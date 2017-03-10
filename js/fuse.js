@@ -24,9 +24,11 @@ var context = canvas.getContext("2d");
 var imageWidth = 80;
 var imageHeight = 80;
 var paletteCount = 5;
-var calcScale = 4;
-canvas.width = imageWidth*calcScale*1.5;
-canvas.height = imageHeight*calcScale*1.5;
+var calcScale = 3;
+var canvasWidth = imageWidth*calcScale*2;
+var canvasHeight = imageHeight*calcScale*2;
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
 
 var img1 = new Image();
 var img2 = new Image();
@@ -74,15 +76,15 @@ function loadImage (imageURL) {
   img1.onload = function () {
     //draw background image
     context.imageSmoothingEnabled = false;
-    context.drawImage(img1, imageWidth, imageHeight, img1.width*calcScale, img1.height*calcScale);
+    context.drawImage(img1, canvasWidth/4, canvasHeight/4, img1.width*calcScale, img1.height*calcScale);
     inputObjects.veil.fadeOut();
   }
 }
 
 function loadFusion () {
-  //draw background image
+  // Draw Body Image
   context.imageSmoothingEnabled = false;
-  context.drawImage(img1, imageWidth, imageHeight, img1.width*calcScale, img1.height*calcScale);
+  context.drawImage(img1, canvasWidth/4, canvasHeight/4, img1.width*calcScale, img1.height*calcScale);
 
   selPokemonId1 = inputObjects.selectPokemon1.val();
   selPokemonId2 = inputObjects.selectPokemon2.val();
@@ -90,21 +92,31 @@ function loadFusion () {
   selPokemon1 = getPokeById(selPokemonId1);
   selPokemon2 = getPokeById(selPokemonId2);
 
+  // Get Ratio to Size Images evenly
   var displayWidthRatio = (selPokemon1.headSize.w / selPokemon2.faceSize.w);
   var displayHeightRatio = (selPokemon1.headSize.h / selPokemon2.faceSize.h);
 
-  var positionX = imageWidth + selPokemon1.headOrigin.x*calcScale - selPokemon2.faceOrigin.x * displayWidthRatio*calcScale;
-  var positionY = imageWidth + selPokemon1.headOrigin.y*calcScale - selPokemon2.faceOrigin.y * displayHeightRatio*calcScale;
+  // Get start position for face
+  var positionX = canvasWidth/4 + selPokemon1.headOrigin.x*calcScale - selPokemon2.faceOrigin.x * displayWidthRatio*calcScale;
+  var positionY = canvasHeight/4 + selPokemon1.headOrigin.y*calcScale - selPokemon2.faceOrigin.y * displayHeightRatio*calcScale;
 
+  // Swap colors
   replacePalette(selPokemon1, selPokemon2);
 
+  // Get most recent pokemon o load
   createCookie("Pokemon1",selPokemonId1,1);
   createCookie("Pokemon2",selPokemonId2,1);
 
-  //if(selPokemon1.direction != selPokemon2.direction)
-    // context.scale(-1, -1);
+  context.save();
 
-  context.drawImage(img2, positionX, positionY, img2.width*displayWidthRatio*calcScale, img2.height*displayHeightRatio*calcScale);
+  // Direction check to swap image context
+  if(selPokemon1.direction != selPokemon2.direction)
+     context.scale(-1, 1);
+
+  context.drawImage(img2, -(img2.width*displayWidthRatio*calcScale) - positionX, positionY, img2.width*displayWidthRatio*calcScale, img2.height*displayHeightRatio*calcScale);
+
+  context.restore();
+
   inputObjects.veil.fadeOut();
 }
 

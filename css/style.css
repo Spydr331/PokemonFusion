@@ -2,6 +2,9 @@ canvas {
   display: block;
   border: 1px solid #eee;
   margin: 0 auto;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webki-crisp-edges;
+  image-rendering: pixelated;
 }
 
 .veil-container {

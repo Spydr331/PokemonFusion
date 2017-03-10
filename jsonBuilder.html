@@ -21,9 +21,9 @@
               <td><select id="selectPokemon" class="form-control"></select></td>
               <td><button id="btnLoad" class="btn btn-primary">Load Pokemon</button></td>
               <td><button id="btnNewPokemon" class="btn btn-success">New Pokemon</button></td>
-              <td><input type="text" id="txtPokemonID" class="form-control" /></td>
-              <td><input type="text" id="txtPokemonName" class="form-control" /></td>
-              <td><input type="text" id="txtPokemonName2" class="form-control" /></td>
+              <td><input type="text" id="txtPokemonID" class="form-control" title="Pokemon ID" /></td>
+              <td><input type="text" id="txtPokemonName" class="form-control" title="Pokemon Name - Part 1" /></td>
+              <td><input type="text" id="txtPokemonName2" class="form-control" title="Pokemon Name - Part 2" /></td>
             </tr>
             <tr>
               <th>Primary <input type="checkbox" id="primaryCheck" class="input-check form-control" title="If this color is of something in the environment" /> </th>
@@ -58,19 +58,19 @@
             </tr>
             <tr>
               <td>Face Size</td>
-              <td><input type="text" id="faceSizew" class="input-size form-control" /></td>
-              <td><input type="text" id="faceSizeh" class="input-size form-control" /></td>
+              <td><input type="text" id="faceSizew" class="input-size form-control" title="width" /></td>
+              <td><input type="text" id="faceSizeh" class="input-size form-control" title="height" /></td>
               <td>Head Size</td>
-              <td><input type="text" id="headSizew" class="input-size form-control" /></td>
-              <td><input type="text" id="headSizeh" class="input-size form-control" /></td>
+              <td><input type="text" id="headSizew" class="input-size form-control" title="width" /></td>
+              <td><input type="text" id="headSizeh" class="input-size form-control" title="height" /></td>
             </tr>
             <tr>
               <td>Face Origin</td>
-              <td><input type="text" id="faceOriginx" class="input-position form-control" /></td>
-              <td><input type="text" id="faceOriginy" class="input-position form-control" /></td>
+              <td><input type="text" id="faceOriginx" class="input-position form-control" title="X" /></td>
+              <td><input type="text" id="faceOriginy" class="input-position form-control" title="Y" /></td>
               <td>Head Origin</td>
-              <td><input type="text" id="headOriginx" class="input-position form-control" /></td>
-              <td><input type="text" id="headOriginy" class="input-position form-control" /></td>
+              <td><input type="text" id="headOriginx" class="input-position form-control" title="X" /></td>
+              <td><input type="text" id="headOriginy" class="input-position form-control" title="Y" /></td>
             </tr>
             <tr>
               <td><button id="btnLoadFuse" class="btn btn-warning">Check Sprites</button></td>
@@ -100,7 +100,7 @@
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/jsonBuilder.js" type="text/javascript"></script>
   </body>
 </html>
